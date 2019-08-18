@@ -28,6 +28,7 @@ def open_link():
     Text1.insert(END, '> 解析专辑成功，选择一项后，按住shift+鼠标左键单击即可批量选择。\n')
     Text1.see(END)
 def download(name,download_url,list_index):
+    Text1.insert(END, download_url+'\n')
     file_name = name + '.mp3'
     #print(file_name)
     file1 = requests.get(download_url,headers = headers)
@@ -110,7 +111,7 @@ def search1(): #此搜索只是为了搜索总数和总页数，需要进一步�
 #GUI
 windows = tk.Tk()
 windows.geometry('870x534')# +34
-windows.title('喜马拉雅专辑下载  BY:Eric QQ：291437830')
+windows.title('ximalayaDownload  BY:Eric QQ：291437830')
 windows.resizable(0,0)
 Entry1 = tk.Entry(windows)
 Entry1.place(height = 34,width = 403,x = 3,y = 6)
